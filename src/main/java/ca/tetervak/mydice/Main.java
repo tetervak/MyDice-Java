@@ -1,6 +1,8 @@
-package ca.tetervak;
+package ca.tetervak.mydice;
 
-import ca.tetervak.model.Die;
+
+import ca.tetervak.mydice.model.Die;
+
 import static java.lang.System.out;
 
 public class Main {

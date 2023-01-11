@@ -1,4 +1,4 @@
-package ca.tetervak.model;
+package ca.tetervak.mydice.model;
 
 public class Die {
 
