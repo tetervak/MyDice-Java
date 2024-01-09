@@ -16,6 +16,10 @@ public class Dice {
         return value;
     }
 
+    public static int getMaxValue(){
+        return MAX_VALUE;
+    }
+
     public final void setValue(int value) {
         if (value >= MIN_VALUE && value <= MAX_VALUE) {
             this.value = value;
@@ -46,5 +50,12 @@ public class Dice {
     public int roll() {
         value = MIN_VALUE + random.nextInt(MAX_VALUE);
         return value;
+    }
+
+    @Override
+    public String toString() {
+        return "Dice{" +
+                "value=" + value +
+                '}';
     }
 }
