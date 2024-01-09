@@ -1,6 +1,6 @@
 package ca.tetervak.mydice.model;
 
-public class Die {
+public class Dice {
 
     public static final int INIT_VALUE = 1;
 
@@ -14,15 +14,15 @@ public class Die {
         if (value >= 1 && value <= 6) {
             this.value = value;
         } else {
-            throw new IllegalArgumentException("Illegal die value " + value);
+            throw new IllegalArgumentException("Illegal dice value " + value);
         }
     }
 
-    public Die(int value) {
+    public Dice(int value) {
         setValue(value);
     }
 
-    public Die() {
+    public Dice() {
         this(INIT_VALUE);
     }
 
