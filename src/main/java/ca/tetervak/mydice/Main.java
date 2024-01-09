@@ -12,6 +12,7 @@ public class Main {
 
         Dice dice = new Dice();
         out.println("Initial dice value: " + dice.getValue());
+        out.println("Dice max value: " + Dice.getMaxValue());
 
         out.print("Dice rolling values:");
         for (int i = 1; i <= 10; i++) {
