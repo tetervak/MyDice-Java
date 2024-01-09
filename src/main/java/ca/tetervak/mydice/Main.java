@@ -11,9 +11,9 @@ public class Main {
         out.println("Hello from MyDice App!");
 
         Dice dice = new Dice();
-        out.println("Initial die value: " + dice.getValue());
+        out.println("Initial dice value: " + dice.getValue());
 
-        out.print("Die rolling values:");
+        out.print("Dice rolling values:");
         for (int i = 1; i <= 5; i++) {
             dice.roll();
             out.print(" " + dice.getValue());
@@ -21,7 +21,7 @@ public class Main {
         out.println();
 
         dice.reset();
-        out.println("Die reset value: " + dice.getValue());
+        out.println("Dice reset value: " + dice.getValue());
 
         out.println("See you later!");
     }
