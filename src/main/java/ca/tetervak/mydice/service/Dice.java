@@ -1,8 +1,14 @@
 package ca.tetervak.mydice.service;
 
+import java.util.Random;
+
 public class Dice {
 
     public static final int INIT_VALUE = 1;
+    public static final int MIN_VALUE = 1;
+    public static final int MAX_VALUE = 6;
+
+    private final Random random;
 
     private int value;
 
@@ -11,16 +17,23 @@ public class Dice {
     }
 
     public final void setValue(int value) {
-        if (value >= 1 && value <= 6) {
+        if (value >= MIN_VALUE && value <= MAX_VALUE) {
             this.value = value;
         } else {
             throw new IllegalArgumentException("Illegal dice value " + value);
         }
     }
 
-    public Dice(int value) {
+    public Dice(int value, Random random){
+        this.random = random;
         setValue(value);
     }
+
+
+    public Dice(int value) {
+        this(value, new Random());
+    }
+
 
     public Dice() {
         this(INIT_VALUE);
@@ -31,7 +44,7 @@ public class Dice {
     }
 
     public int roll() {
-        value = 1 + (int) (6 * Math.random());
+        value = MIN_VALUE + random.nextInt(MAX_VALUE);
         return value;
     }
 }

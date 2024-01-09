@@ -14,7 +14,7 @@ public class Main {
         out.println("Initial dice value: " + dice.getValue());
 
         out.print("Dice rolling values:");
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 10; i++) {
             dice.roll();
             out.print(" " + dice.getValue());
         }
