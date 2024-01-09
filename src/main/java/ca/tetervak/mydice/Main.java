@@ -1,7 +1,7 @@
 package ca.tetervak.mydice;
 
 
-import ca.tetervak.mydice.model.Dice;
+import ca.tetervak.mydice.service.Dice;
 
 import static java.lang.System.out;
 

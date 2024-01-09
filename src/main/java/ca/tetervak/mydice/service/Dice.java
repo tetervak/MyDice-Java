@@ -1,4 +1,4 @@
-package ca.tetervak.mydice.model;
+package ca.tetervak.mydice.service;
 
 public class Dice {
 
