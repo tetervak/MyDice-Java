@@ -1,5 +1,4 @@
-package ca.tetervak.mydice;
-
+package ca.tetervak;
 
 import ca.tetervak.mydice.service.Dice;
 
