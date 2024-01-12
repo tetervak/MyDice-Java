@@ -27,7 +27,7 @@ class DiceTest {
     static void init(){
         out.println("**** Starting Dice Class Tests ****");
         // providing the seed value makes the random sequence reproducible
-        random = new Random(1);
+        random = new Random(3);
     }
 
     @AfterAll

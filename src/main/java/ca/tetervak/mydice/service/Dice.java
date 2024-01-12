@@ -48,7 +48,7 @@ public class Dice {
     }
 
     public int roll() {
-        value = MIN_VALUE + random.nextInt(MAX_VALUE);
+        value = random.nextInt(MIN_VALUE, MAX_VALUE + 1);
         return value;
     }
 
