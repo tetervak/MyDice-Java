@@ -1,4 +1,4 @@
-package ca.tetervak.mydice.service;
+package ca.tetervak.mydice.domain;
 
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,6 +1,6 @@
 package ca.tetervak;
 
-import ca.tetervak.mydice.service.Dice;
+import ca.tetervak.mydice.domain.Dice;
 
 import static java.lang.System.out;
 

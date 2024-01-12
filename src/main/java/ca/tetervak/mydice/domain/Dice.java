@@ -1,4 +1,4 @@
-package ca.tetervak.mydice.service;
+package ca.tetervak.mydice.domain;
 
 import java.util.Random;
 
