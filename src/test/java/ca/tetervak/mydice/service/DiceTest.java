@@ -27,7 +27,7 @@ class DiceTest {
     static void init(){
         out.println("**** Starting Dice Class Tests ****");
         // providing the seed value makes the random sequence reproducible
-        random = new Random(100);
+        random = new Random(222);
     }
 
     @AfterAll
@@ -167,7 +167,7 @@ class DiceTest {
 
 
     @DisplayName("Calling roll repeatably")
-    @RepeatedTest(5)
+    @RepeatedTest(10)
     void roll_repeated() {
         // providing the seed value makes the random sequence reproducible
         var dice = new Dice(Dice.INIT_VALUE, random);
