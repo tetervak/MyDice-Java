@@ -27,7 +27,7 @@ class DiceTest {
     static void init(){
         out.println("**** Starting Dice Class Tests ****");
         // providing the seed value makes the random sequence reproducible
-        random = new Random(3);
+        random = new Random(100);
     }
 
     @AfterAll
@@ -40,7 +40,7 @@ class DiceTest {
     @DisplayName("Check that min dice value < max dice value")
     void limits(){
         out.println("min value = " + Dice.MIN_VALUE);
-        out.println("max value = " + Dice.MIN_VALUE);
+        out.println("max value = " + Dice.MAX_VALUE);
         assertTrue(Dice.MIN_VALUE < Dice.MAX_VALUE);
     }
 
