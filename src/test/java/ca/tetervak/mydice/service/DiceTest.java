@@ -83,6 +83,34 @@ class DiceTest {
     }
 
     @Test
+    @DisplayName("Set illegal, too small, value. Check exception message")
+    void setValue_tooSmall() {
+        var dice = new Dice();
+        out.println("dice = " + dice);
+        out.println("set illegal values");
+        out.println("setting too small value");
+        var tooSmallValue = Dice.MIN_VALUE - 1;
+        Exception exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> dice.setValue(tooSmallValue)
+        );
+        assertEquals("Illegal dice value " + tooSmallValue, exception.getMessage());
+    }
+
+    @Test
+    @DisplayName("Set illegal, too large, value")
+    void setValue_tooLarge() {
+        var dice = new Dice();
+        out.println("dice = " + dice);
+        out.println("setting too large value");
+        var tooLargeValue = Dice.MAX_VALUE + 1;
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> dice.setValue(tooLargeValue)
+        );
+    }
+
+    @Test
     @DisplayName("Set Illegal values")
     void setValue_illegal() {
         var dice = new Dice();
@@ -126,12 +154,13 @@ class DiceTest {
     }
 
     @Test
-    @DisplayName("Calling roll")
+    @DisplayName("Calling roll. Check the returned value")
     void roll() {
         var dice = new Dice(Dice.INIT_VALUE, random);
         out.println("before roll = " + dice);
-        dice.roll();
+        var returned = dice.roll();
         out.println("after roll = " + dice);
+        assertEquals(dice.getValue(), returned);
         assertTrue(dice.getValue() >= Dice.MIN_VALUE);
         assertTrue(dice.getValue() <= Dice.MAX_VALUE);
     }
