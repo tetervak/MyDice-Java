@@ -2,7 +2,7 @@ package ca.tetervak.mydice.service;
 
 import java.util.Random;
 
-public class Dice {
+public class Dice implements Rollable{
 
     public static final int INIT_VALUE = 1;
     public static final int MIN_VALUE = 1;
@@ -47,6 +47,7 @@ public class Dice {
         value = INIT_VALUE;
     }
 
+    @Override
     public int roll() {
         value = random.nextInt(MIN_VALUE, MAX_VALUE + 1);
         return value;
