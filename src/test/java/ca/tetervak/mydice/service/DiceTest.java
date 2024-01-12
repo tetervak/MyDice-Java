@@ -37,11 +37,14 @@ class DiceTest {
 
     @SuppressWarnings("ConstantValue")
     @Test
-    @DisplayName("Check that min dice value < max dice value")
+    @DisplayName("Check that the limits make sense")
     void limits(){
         out.println("min value = " + Dice.MIN_VALUE);
         out.println("max value = " + Dice.MAX_VALUE);
         assertTrue(Dice.MIN_VALUE < Dice.MAX_VALUE);
+        out.println("init value = " + Dice.INIT_VALUE);
+        assertTrue(Dice.INIT_VALUE >= Dice.MIN_VALUE);
+        assertTrue(Dice.INIT_VALUE <= Dice.MAX_VALUE);
     }
 
     @Test
