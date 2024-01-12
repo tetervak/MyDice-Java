@@ -55,7 +55,7 @@ public class Dice {
     @Override
     public String toString() {
         return "Dice{" +
-                "value=" + value +
+                "value = " + value +
                 '}';
     }
 }
