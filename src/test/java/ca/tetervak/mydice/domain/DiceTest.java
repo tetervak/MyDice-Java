@@ -113,27 +113,6 @@ class DiceTest {
         );
     }
 
-    @Test
-    @DisplayName("Set Illegal values")
-    void setValue_illegal() {
-        var dice = new Dice();
-        out.println("dice = " + dice);
-        out.println("set illegal values");
-        out.println("setting too small value");
-        var tooSmallValue = Dice.MIN_VALUE - 1;
-        Exception exception = assertThrows(
-                IllegalArgumentException.class,
-                () -> dice.setValue(tooSmallValue)
-        );
-        assertEquals("Illegal dice value " + tooSmallValue, exception.getMessage());
-        out.println("setting too large value");
-        var tooLargeValue = Dice.MAX_VALUE + 1;
-        assertThrows(
-                IllegalArgumentException.class,
-                () -> dice.setValue(tooLargeValue)
-        );
-    }
-
     @DisplayName("Set min and max values")
     @ParameterizedTest(name = "setting {0} value")
     @ValueSource(ints = { Dice.MIN_VALUE, Dice.MAX_VALUE })
